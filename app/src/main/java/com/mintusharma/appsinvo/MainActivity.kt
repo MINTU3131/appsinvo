@@ -213,31 +213,34 @@ class MainActivity : AppCompatActivity() ,
         return sqrt(deltaX.pow(2) + deltaY.pow(2))
     }
 
-//    private fun positionFab(selectedItemId: Int) {
-//        val menu = binding.bottomNavigation.menu
-//        val menuItemView = menu.findItem(selectedItemId)?.let { menuItem ->
-//            binding.bottomNavigation.findViewById<View>(menuItem.itemId)
-//        }
-//
-//        val menuWidth = binding.bottomNavigation.width
-//        val fabWidth = binding.fab.width
-//        val halfFabWidth = fabWidth / 2
-//
-//        menuItemView?.let { view ->
-//            // Calculate the center of the selected menu item
-//            val centerX = view.left + view.width / 2
-//
-//            // Calculate the translationX value to position the FAB at the center of the menu item
-//            val translationX = centerX - halfFabWidth
-//
-//            // Set the translationX value to the FAB
-//            binding.fab.translationX = translationX.toFloat()
-//        }
-//
-//        // If the last menu item is selected, position the FAB at the end of the menu bar
+    private fun positionFab(selectedItemId: Int) {
+        val menu = binding.bottomNavigation.menu
+        val menuItemView = menu.findItem(selectedItemId)?.let { menuItem ->
+            binding.bottomNavigation.findViewById<View>(menuItem.itemId)
+        }
+
+        val menuWidth = binding.bottomNavigation.width
+        val fabWidth = binding.fab.width
+        val halfFabWidth = fabWidth / 2
+
+        menuItemView?.let { view ->
+            // Calculate the center of the selected menu item
+            val centerX = view.left + view.width / 2
+
+            // Calculate the translationX value to position the FAB at the center of the menu item
+            val translationX = centerX - halfFabWidth
+
+            // Set the translationX value to the FAB
+            binding.fab.translationX = translationX.toFloat()
+        }
+
+        // If the last menu item is selected, position the FAB at the end of the menu bar
 //        if (selectedItemId == menu.last().itemId) {
 //            binding.fab.translationX = (menuWidth - fabWidth).toFloat()
 //        }
-//    }
+        if (selectedItemId == menu.getItem(menu.size() - 1).itemId) {
+            binding.fab.translationX = (menuWidth - fabWidth).toFloat()
+        }
+    }
 
 }
