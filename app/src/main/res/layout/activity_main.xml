@@ -87,6 +87,7 @@
             android:layout_height="55dp"
             android:layout_gravity="bottom"
             app:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
             app:fabCradleMargin="10dp"
             android:background="@android:color/transparent"
             app:fabCradleRoundedCornerRadius="10dp"
@@ -111,7 +112,6 @@
                     android:contentDescription="@string/app_name"
                     android:outlineAmbientShadowColor="@color/colorPrimaryDark"
                     android:outlineSpotShadowColor="@color/colorPrimaryDark"
-                    android:padding="10dp"
                     android:src="@drawable/vector_smart_object_copy_3_2"
                     app:layout_anchor="@id/bottomAppBar"
                     app:maxImageSize="25dp">

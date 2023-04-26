@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() ,
 
     @SuppressLint("ResourceType")
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
         when (item.itemId) {
             R.id.home -> {
                 val homeFragment = HomeFragment()
@@ -65,17 +66,21 @@ class MainActivity : AppCompatActivity() ,
                     .commit()
 
                 binding.fab.setImageResource(R.drawable.vector_smart_object_copy_3_2)
+//                val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
+//                layoutParams.anchorId = R.id.bottomAppBar
+//                layoutParams.anchorGravity = Gravity.CENTER or Gravity.CENTER
+//                layoutParams.gravity = Gravity.CENTER or Gravity.CENTER
+////                layoutParams.bottomMargin = resources.getDimension(55).toInt()
+//                binding.fab.layoutParams = layoutParams
+//
+//                binding.fab.animate()
+//                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.home))
+//                    .setDuration(300)
+//                    .start()
                 val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
-                layoutParams.anchorId = R.id.bottomAppBar
-                layoutParams.anchorGravity = Gravity.CENTER or Gravity.CENTER
-                layoutParams.gravity = Gravity.CENTER or Gravity.CENTER
-//                layoutParams.bottomMargin = resources.getDimension(55).toInt()
+                layoutParams.anchorId = R.id.home
+                layoutParams.anchorGravity = Gravity.CENTER
                 binding.fab.layoutParams = layoutParams
-
-                binding.fab.animate()
-                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.home))
-                    .setDuration(300)
-                    .start()
 
                 return true
             }
@@ -86,17 +91,21 @@ class MainActivity : AppCompatActivity() ,
                     .commit()
 
                 binding.fab.setImageResource(R.drawable.vector_smart_object_5)
+//                val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
+//                layoutParams.anchorId = R.id.bottomAppBar
+//                layoutParams.anchorGravity = Gravity.START or Gravity.CENTER
+//                layoutParams.gravity = Gravity.START or Gravity.CENTER
+////                layoutParams.bottomMargin = resources.getDimension(55).toInt()
+//                binding.fab.layoutParams = layoutParams
+//
+//                binding.fab.animate()
+//                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.myBooking))
+//                    .setDuration(300)
+//                    .start()
                 val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
-                layoutParams.anchorId = R.id.bottomAppBar
-                layoutParams.anchorGravity = Gravity.START or Gravity.CENTER
-                layoutParams.gravity = Gravity.START or Gravity.CENTER
-//                layoutParams.bottomMargin = resources.getDimension(55).toInt()
+                layoutParams.anchorId = R.id.myBooking
+                layoutParams.anchorGravity = Gravity.CENTER
                 binding.fab.layoutParams = layoutParams
-
-                binding.fab.animate()
-                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.myBooking))
-                    .setDuration(300)
-                    .start()
 
                 return true
             }
@@ -107,17 +116,21 @@ class MainActivity : AppCompatActivity() ,
                     .commit()
 
                 binding.fab.setImageResource(R.drawable.shape_1)
+//                val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
+//                layoutParams.anchorId = R.id.bottomAppBar
+//                layoutParams.anchorGravity = Gravity.RIGHT or Gravity.CENTER
+//                layoutParams.gravity = Gravity.RIGHT or Gravity.CENTER
+////                layoutParams.bottomMargin = resources.getDimension(R.dimen.fab_right_margin).toInt()
+//                binding.fab.layoutParams = layoutParams
+//
+//                binding.fab.animate()
+//                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.myQR))
+//                    .setDuration(300)
+//                    .start()
                 val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
-                layoutParams.anchorId = R.id.bottomAppBar
-                layoutParams.anchorGravity = Gravity.RIGHT or Gravity.CENTER
-                layoutParams.gravity = Gravity.RIGHT or Gravity.CENTER
-//                layoutParams.bottomMargin = resources.getDimension(R.dimen.fab_right_margin).toInt()
+                layoutParams.anchorId = R.id.myQR
+                layoutParams.anchorGravity = Gravity.CENTER
                 binding.fab.layoutParams = layoutParams
-
-                binding.fab.animate()
-                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.myQR))
-                    .setDuration(300)
-                    .start()
 
                 return true
             }
@@ -128,17 +141,22 @@ class MainActivity : AppCompatActivity() ,
                     .commit()
 
                 binding.fab.setImageResource(R.drawable.vector_smart_object_8)
+//                val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
+//                layoutParams.anchorId = R.id.bottomAppBar
+//                layoutParams.anchorGravity = Gravity.START or Gravity.CENTER
+//                layoutParams.gravity = Gravity.START or Gravity.CENTER
+////                layoutParams.bottomMargin = resources.getDimension(R.dimen.fab_left_margin).toInt()
+//                binding.fab.layoutParams = layoutParams
+//
+//                binding.fab.animate()
+//                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.scanQr))
+//                    .setDuration(300)
+//                    .start()
                 val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
-                layoutParams.anchorId = R.id.bottomAppBar
-                layoutParams.anchorGravity = Gravity.START or Gravity.CENTER
-                layoutParams.gravity = Gravity.START or Gravity.CENTER
-//                layoutParams.bottomMargin = resources.getDimension(R.dimen.fab_left_margin).toInt()
+                layoutParams.anchorId = R.id.scanQr
+                layoutParams.anchorGravity = Gravity.CENTER
                 binding.fab.layoutParams = layoutParams
 
-                binding.fab.animate()
-                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.scanQr))
-                    .setDuration(300)
-                    .start()
 
                 return true
             }
@@ -149,17 +167,21 @@ class MainActivity : AppCompatActivity() ,
                     .commit()
 
                 binding.fab.setImageResource(R.drawable.ic_profile)
+//                val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
+//                layoutParams.anchorId = R.id.bottomAppBar
+//                layoutParams.anchorGravity = Gravity.END or Gravity.CENTER
+//                layoutParams.gravity = Gravity.END or Gravity.CENTER
+////                layoutParams.bottomMargin = resources.getDimension(55).toInt()
+//                binding.fab.layoutParams = layoutParams
+//
+//                binding.fab.animate()
+//                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.profile))
+//                    .setDuration(300)
+//                    .start()
                 val layoutParams = binding.fab.layoutParams as CoordinatorLayout.LayoutParams
-                layoutParams.anchorId = R.id.bottomAppBar
-                layoutParams.anchorGravity = Gravity.END or Gravity.CENTER
-                layoutParams.gravity = Gravity.END or Gravity.CENTER
-//                layoutParams.bottomMargin = resources.getDimension(55).toInt()
+                layoutParams.anchorId = R.id.profile
+                layoutParams.anchorGravity = Gravity.END
                 binding.fab.layoutParams = layoutParams
-
-                binding.fab.animate()
-                    .translationX(calculateMenuItemDistance(this,binding.bottomNavigation.selectedItemId,R.id.profile))
-                    .setDuration(300)
-                    .start()
 
                 return true
             }
