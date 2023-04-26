@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/vector_smart_object_6"
+        android:iconTint="@color/white"
+        android:title="My Booking"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/notification"
+        android:icon="@drawable/vector_smart_object_7"
+        android:iconTint="@color/white"
+        android:title="Scan QR"
+        app:showAsAction="always"/>
+
+
+
+</menu>
